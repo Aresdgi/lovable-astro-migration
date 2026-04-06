@@ -107,27 +107,26 @@ Once the repository is public and discoverable, it follows the same installation
 - `assets/intake-template.md` — reusable intake prompts and handoff framing
 - `evals/evals.json` — starter evaluation prompts for improving or benchmarking the skill
 
-## Publishing checklist
+## GitHub metadata
 
-Before sharing it publicly:
+This repository is published as:
 
-1. Create a new public GitHub repo named **`lovable-astro-migration`**.
-2. Upload these files to the repo root.
-3. Confirm the repo owner is `aresdgi`.
-4. Add a short repo description on GitHub, for example:
-   > AI skill for migrating Lovable exports to Astro with high visual fidelity and minimal hydration.
-5. Add topics like:
-   - `agent-skill`
-   - `skills-sh`
-   - `astro`
-   - `lovable`
-   - `tailwindcss`
-   - `migration`
-6. Make sure the repository is **public**.
+- **Owner:** `aresdgi`
+- **Repository:** `lovable-astro-migration`
+- **Visibility:** `public`
 
-## Suggested GitHub description
+### Suggested GitHub description
 
 > High-fidelity AI skill for migrating Lovable-generated React/Tailwind/Vite projects into Astro without losing the original design.
+
+### Suggested topics
+
+- `agent-skill`
+- `skills-sh`
+- `astro`
+- `lovable`
+- `tailwindcss`
+- `migration`
 
 ## Notes
 
