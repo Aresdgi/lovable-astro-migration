@@ -82,6 +82,7 @@ Use this skill when the user says things like:
 - bundled references and eval prompts for maintainability
 - public GitHub repo with installation by owner/repo shorthand
 - automated validation workflow for every push and pull request
+- explicit security boundary for repo URL mode: external repositories are treated as untrusted input
 
 ## Repository structure
 
