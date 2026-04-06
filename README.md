@@ -9,6 +9,7 @@
   <img alt="Astro" src="https://img.shields.io/badge/Astro-high--fidelity%20migration-FF5D01?style=for-the-badge&logo=astro&logoColor=white">
   <img alt="Lovable" src="https://img.shields.io/badge/Lovable-design%20preservation-F43F5E?style=for-the-badge">
   <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-keep%20the%20visual%20system-0EA5E9?style=for-the-badge&logo=tailwindcss&logoColor=white">
+  <a href="https://github.com/aresdgi/lovable-astro-migration/actions/workflows/validate.yml"><img alt="validate skill" src="https://github.com/aresdgi/lovable-astro-migration/actions/workflows/validate.yml/badge.svg"></a>
 </p>
 
 High-fidelity AI skill for migrating **Lovable-generated React/Tailwind/Vite projects** into **Astro** without flattening the design, over-hydrating the app, or turning the migration into a generic rewrite.
@@ -21,7 +22,29 @@ This skill is built for the real workflow:
 - keep only the necessary interactive React islands,
 - finish with a coherent Astro architecture.
 
+<p align="center">
+  <strong>Works with:</strong> Skills CLI, Claude Code, OpenCode, and other agent runtimes supported by the open skills ecosystem.
+</p>
+
 ---
+
+## Quick install
+
+```bash
+npx skills add aresdgi/lovable-astro-migration
+```
+
+### Install for Claude Code
+
+```bash
+npx skills add aresdgi/lovable-astro-migration -a claude-code
+```
+
+### Install for OpenCode
+
+```bash
+npx skills add aresdgi/lovable-astro-migration -a opencode
+```
 
 ## Why this skill exists
 
@@ -52,6 +75,13 @@ Use this skill when the user says things like:
 - “Convert this React + Tailwind + Vite export from Lovable into Astro.”
 - “I already have an Astro project — merge this Lovable design into it.”
 - “Keep the exact look, but reduce hydration and split islands correctly.”
+
+## What makes this repo trustworthy
+
+- root-level `SKILL.md` compatible with the Skills ecosystem
+- bundled references and eval prompts for maintainability
+- public GitHub repo with installation by owner/repo shorthand
+- automated validation workflow for every push and pull request
 
 ## Repository structure
 
@@ -89,6 +119,14 @@ npx skills add aresdgi/lovable-astro-migration
 ```bash
 npx skills add aresdgi/lovable-astro-migration --skill lovable-astro-migration
 ```
+
+## Tested install paths
+
+This repository is designed to install cleanly through the Skills CLI and to work especially well with:
+
+- `claude-code`
+- `opencode`
+- other compatible agents supported by the ecosystem
 
 ## Why it should work well on skills.sh
 
@@ -136,8 +174,8 @@ This repository is published as:
 
 ---
 
-If you want, the next step is to add:
+If you want to keep polishing it, the next step is to add:
 
 - a **social preview PNG** exported from `assets/cover.svg`,
-- a **GitHub Actions validation workflow**,
-- or a **second polished README variant** optimized for conversions on skills.sh.
+- an **example migration before/after section**,
+- or a **second README variant focused on skills.sh conversion copy**.

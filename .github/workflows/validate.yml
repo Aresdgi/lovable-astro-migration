@@ -1,0 +1,88 @@
+name: Validate skill
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install validation dependencies
+        run: python -m pip install --upgrade pip pyyaml
+
+      - name: Validate SKILL.md, resources, and evals
+        shell: bash
+        run: |
+          python <<'PY'
+          import json
+          import pathlib
+          import re
+          import sys
+          import yaml
+
+          root = pathlib.Path('.')
+          skill_path = root / 'SKILL.md'
+          if not skill_path.exists():
+              raise SystemExit('SKILL.md is missing at repository root')
+
+          text = skill_path.read_text(encoding='utf-8')
+          match = re.match(r'^---\n(.*?)\n---\n', text, re.S)
+          if not match:
+              raise SystemExit('SKILL.md is missing valid YAML frontmatter')
+
+          frontmatter = yaml.safe_load(match.group(1)) or {}
+          for field in ('name', 'description'):
+              if not frontmatter.get(field):
+                  raise SystemExit(f'Missing required frontmatter field: {field}')
+
+          if frontmatter['name'] != 'lovable-astro-migration':
+              raise SystemExit('Expected skill name lovable-astro-migration')
+
+          required_paths = [
+              root / 'assets' / 'intake-template.md',
+              root / 'assets' / 'cover.svg',
+              root / 'references' / 'migration-checklist.md',
+              root / 'evals' / 'evals.json',
+              root / 'README.md',
+              root / 'LICENSE',
+          ]
+
+          missing = [str(path) for path in required_paths if not path.exists()]
+          if missing:
+              raise SystemExit('Missing expected repository files: ' + ', '.join(missing))
+
+          evals = json.loads((root / 'evals' / 'evals.json').read_text(encoding='utf-8'))
+          if evals.get('skill_name') != 'lovable-astro-migration':
+              raise SystemExit('evals.json has an unexpected skill_name value')
+
+          prompts = evals.get('evals', [])
+          if len(prompts) < 3:
+              raise SystemExit('Expected at least 3 evaluation prompts')
+
+          for item in prompts:
+              for field in ('id', 'prompt', 'expected_output', 'files'):
+                  if field not in item:
+                      raise SystemExit(f"Eval entry is missing field: {field}")
+
+          print('Skill structure validated successfully.')
+          PY
+
+      - name: Verify skills CLI discovery
+        run: npx -y skills add . --list
