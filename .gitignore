@@ -1,0 +1,9 @@
+# Local agent installations
+.agents/
+.claude/
+skills-lock.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

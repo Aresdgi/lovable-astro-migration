@@ -1,0 +1,23 @@
+{
+  "skill_name": "lovable-astro-migration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tengo un repositorio exportado desde Lovable con React, Tailwind y Vite. Quiero migrarlo completo a Astro manteniendo exactamente la estética, pasando a .astro todo lo estático y dejando como islands solo lo interactivo.",
+      "expected_output": "La respuesta debe priorizar una migración completa, auditar el export antes de editar, preservar fielmente el diseño, mapear qué pasa a Astro y qué queda como React island, y evitar una reescritura genérica.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Te paso el enlace de un repo de GitHub generado en Lovable. Quiero que lo conviertas en Astro sin perder tipografías, colores, animaciones ni responsive. Además, quiero que respetes un proyecto Astro existente como destino.",
+      "expected_output": "La respuesta debe contemplar el modo repo URL, inspección real del repositorio, integración con un Astro existente, preservación de estilos y assets, y una estrategia de merge sin sobrescribir ciegamente.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Estoy dentro de una carpeta con un proyecto Astro y quiero absorber un diseño hecho en Lovable. Hacé la migración total, mantené Tailwind, no hidrates toda la página y dejá una arquitectura Astro coherente.",
+      "expected_output": "La respuesta debe detectar el modo proyecto Astro existente, proponer Astro para lo estático, React islands para lo interactivo, mantener Tailwind y entregar implementación en vez de solo teoría.",
+      "files": []
+    }
+  ]
+}

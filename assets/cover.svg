@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="1080" y2="570" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="252" y1="148" x2="931" y2="486" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF5D5D"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <g opacity="0.55" filter="url(#blur)">
+    <circle cx="250" cy="160" r="120" fill="#FF5D5D"/>
+    <circle cx="945" cy="190" r="130" fill="#8B5CF6"/>
+    <circle cx="860" cy="470" r="150" fill="#0EA5E9"/>
+  </g>
+
+  <rect x="64" y="56" width="1072" height="518" rx="28" fill="rgba(15,23,42,0.78)" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="94" y="88" width="160" height="34" rx="17" fill="rgba(255,255,255,0.08)"/>
+  <text x="114" y="111" fill="#E5E7EB" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="1.5">SKILL FOR AI AGENTS</text>
+
+  <text x="94" y="204" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Lovable → Astro</text>
+  <text x="94" y="272" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="28">High-fidelity migration skill that preserves the original design,</text>
+  <text x="94" y="310" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="28">moves static UI to Astro, and keeps only the right React islands.</text>
+
+  <rect x="94" y="374" width="1012" height="2" fill="url(#accent)" opacity="0.9"/>
+
+  <g>
+    <rect x="94" y="418" width="286" height="92" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.09)"/>
+    <text x="122" y="454" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="18">01</text>
+    <text x="122" y="487" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Audit first</text>
+    <text x="122" y="512" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">Routes, styles, assets, SEO,</text>
+    <text x="122" y="535" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">interactivity, dependencies</text>
+  </g>
+
+  <g>
+    <rect x="408" y="418" width="286" height="92" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.09)"/>
+    <text x="436" y="454" fill="#C4B5FD" font-family="Arial, Helvetica, sans-serif" font-size="18">02</text>
+    <text x="436" y="487" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Preserve design</text>
+    <text x="436" y="512" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">Typography, spacing, motion,</text>
+    <text x="436" y="535" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">responsive behavior, assets</text>
+  </g>
+
+  <g>
+    <rect x="722" y="418" width="384" height="92" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.09)"/>
+    <text x="750" y="454" fill="#FDA4AF" font-family="Arial, Helvetica, sans-serif" font-size="18">03</text>
+    <text x="750" y="487" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Migrate with intent</text>
+    <text x="750" y="512" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">Static sections to .astro, narrow islands only</text>
+    <text x="750" y="535" fill="#D1D5DB" font-family="Arial, Helvetica, sans-serif" font-size="18">where real client behavior is required</text>
+  </g>
+</svg>
